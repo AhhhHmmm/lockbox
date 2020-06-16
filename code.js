@@ -42,7 +42,7 @@ let currentAttempt = document.querySelector(".currentAttempt");
 
 				setTimeout(() => {
 					if (passcode.join(',') == presses.join(',')) {
-						alert("Passcode Correct, Door Opening, We're in!")
+						alert("Correct passcode has been entered - Lockbox opening!")
 					}
 				}
 				, 200)
