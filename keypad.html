@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lockbox</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		* {
+			font-family: monospace;
+			box-sizing: border-box;
+			font-size: 25px;
+		}
+
+		body {
+			background: #FAFAFA;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 40px;
+		}
+
+		.panel {
+			display: inline-grid;
+			background: black;
+			grid-gap: 10px;
+			padding: 10px;
+			grid-template-columns: repeat(3, 40px);
+			grid-template-rows: repeat(3, 40px);
+			box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+		}
+
+		.key {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			font-size: 25px;
+			background: rgb(150,255,150);
+			border: 2px solid darkgray;
+		}
+
+		.key:hover {
+			cursor: pointer;
+		}
+
+		.key1 {
+			background: red;
+		}
+
+		.key2 {
+			background: yellow;
+		}
+
+		.key3 {
+			background: blue;
+		}
+
+		.key4 {
+			background: green;
+		}
+
+		.key5 {
+			background: orange;
+		}
+
+		.key6 {
+			background: purple;
+		}
+
+		.key7 {
+			background: pink;
+		}
+
+		.key8 {
+			background: white;
+		}
+
+		.key9 {
+			background: black;
+			color: white;
+		}
+
+		.content {
+			text-align: center;
+		}
+
+		#recording {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			font-size: 25px;
+			padding: 15px;
+			background: rgb(150,150,255);
+			border: 2px solid darkgray;
+			border-radius: 5px;
+			
+			margin:auto;
+			margin-top: 50px;
+		}
+
+		#recording:hover {
+			background: rgb(200,200,255);
+			cursor: pointer;
+		}
+
+		#stop {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			font-size: 25px;
+			padding: 15px;
+			background: rgb(255,150,150);
+			border: 2px solid darkgray;
+			border-radius: 5px;
+			
+			margin:auto;
+			margin-top: 10px;
+		}
+
+		#stop:hover {
+			background: rgb(255,200,200);
+			cursor: pointer;
+		}
+
+		.currentAttempt {
+			display: inline-grid;
+			background: black;
+			grid-gap: 10px;
+			padding: 10px;
+			grid-template-columns: repeat(15, 40px);
+			grid-template-rows: repeat(1, 40px);
+			box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1>Lockbox</h1>
+		<div class="panel">
+			<div class="keypadbutton key key1" id="key1" data-value="1"></div>
+			<div class="keypadbutton key key2" id="key2" data-value="2"></div>
+			<div class="keypadbutton key key3" id="key3" data-value="3"></div>
+			<div class="keypadbutton key key4" id="key4" data-value="4"></div>
+			<div class="keypadbutton key key5" id="key5" data-value="5"></div>
+			<div class="keypadbutton key key6" id="key6" data-value="6"></div>
+			<div class="keypadbutton key key7" id="key7" data-value="7"></div>
+			<div class="keypadbutton key key8" id="key8" data-value="8"></div>
+			<div class="keypadbutton key key9" id="key9" data-value="9"></div>
+		</div>
+		<p>Current Attempt:</p>
+		<div class="currentAttempt">None</div><br>
+		<button>Reset</button>
+
+		<audio src="sound5.wav"></audio>
+	</div>
+
+	<script type="text/javascript" src="code.js"></script>
+</body>
+</html>
